@@ -14,7 +14,7 @@ function makeRow(length, container)
 {
     for(let i=0; i<length; ++i)
     {
-        const line = document.createElement("div");
+        const line = document.createElement("span");
         line.setAttribute("class","gridElement");
         container.appendChild(line);
     }

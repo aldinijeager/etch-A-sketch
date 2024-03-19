@@ -23,6 +23,26 @@ function makeRow(length, container)
 }
 
 
-makeGrid(3);
+makeGrid(20);
 
+const size = document.querySelectorAll(".size-option");
 
+size.forEach( (size) => 
+{
+    size.addEventListener("click", () =>
+    {   
+        const children = document.querySelectorAll(".gridHeight");
+        children.forEach((child =>
+        {
+            canvas.removeChild(child);
+        }))
+        makeGrid(size.value);
+    });
+})
+
+const gridElement = document.querySelectorAll(".gridElement");
+
+gridElement.forEach((element) =>
+{
+    element.addEventListener("hover",)
+});

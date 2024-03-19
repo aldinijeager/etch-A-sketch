@@ -44,12 +44,27 @@ size.forEach( (size) =>
 function draw()
 {
     const gridElement = document.querySelectorAll(".gridElement");
-
+    let color = "blue";
     gridElement.forEach((element) =>
     {
         element.addEventListener("mouseover",(e) => 
         {
-            element.setAttribute("style","backGround:blue");
+            const colorButtons = document.querySelectorAll(".color-option");
+
+            colorButtons.forEach( (button) => 
+            {
+                button.addEventListener("click", () => 
+                {
+                    color = button.value;
+                })
+            });
+            console.log(color);
+            element.setAttribute("style",`backGround:${color}`);
         });
     });
+}
+
+function selectColor()
+{
+    
 }

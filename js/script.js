@@ -24,7 +24,7 @@ function makeRow(length, container)
 
 
 makeGrid(20);
-
+draw();
 const size = document.querySelectorAll(".size-option");
 
 size.forEach( (size) => 
@@ -37,12 +37,19 @@ size.forEach( (size) =>
             canvas.removeChild(child);
         }))
         makeGrid(size.value);
+        draw();
     });
 })
 
-const gridElement = document.querySelectorAll(".gridElement");
-
-gridElement.forEach((element) =>
+function draw()
 {
-    element.addEventListener("hover",)
-});
+    const gridElement = document.querySelectorAll(".gridElement");
+
+    gridElement.forEach((element) =>
+    {
+        element.addEventListener("mouseover",(e) => 
+        {
+            element.setAttribute("style","backGround:blue");
+        });
+    });
+}

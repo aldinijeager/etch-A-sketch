@@ -6,8 +6,11 @@
 #canvas{
     display: flex;
     flex-direction: column;
+    
 }
 .gridElement{
     width: 10px;
     height: 10px;
+    border: solid;
+    margin: 2px;
 }

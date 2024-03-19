@@ -3,10 +3,19 @@
     padding: 0;
 }
 
-
+#canvas{
+    width: 90%;
+    border: solid;
+}
+.gridHeight{
+    display: flex;
+    gap: 2px;
+    margin: 2px;
+}
 .gridElement{
     display: inline-block;
+    flex: 1;
+    height: 10px;
     border: 1px solid;
     margin: 0px;
-
 }

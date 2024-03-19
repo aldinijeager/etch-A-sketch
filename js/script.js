@@ -6,6 +6,7 @@ function makeGrid(size)
     for(let i=0; i<size; ++i)
     {
         const height = document.createElement("div");
+        height.setAttribute("class","gridHeight")
         makeRow(size,height);
         canvas.appendChild(height);
     }
@@ -21,24 +22,7 @@ function makeRow(length, container)
     }
 }
 
-function dynamicSize()
-{
-    const screenWidth = window.innerWidth;
-    console.log(screenWidth);
-    const elementSize = screenWidth / size - 20;
 
-    const elements = document.querySelectorAll(".gridElement");
-    elements.forEach((elem) => 
-    {
-        elem.setAttribute("style",`width:${elementSize}px; height: ${elementSize}px;`)
-    })
-}
-let size = 5
+makeGrid(3);
 
-makeGrid(size);
-dynamicSize();
 
-window.addEventListener("resize", () =>
-{
-    dynamicSize();
-})

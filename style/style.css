@@ -6,7 +6,7 @@
 
 .gridElement{
     display: inline-block;
-    border: solid;
-    margin: 2px;
+    border: 1px solid;
+    margin: 0px;
 
 }

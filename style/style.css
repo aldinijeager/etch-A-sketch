@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+#canvas{
+    display: flex;
+    flex-direction: column;
+}
+.gridElement{
+    width: 10px;
+    height: 10px;
+}
